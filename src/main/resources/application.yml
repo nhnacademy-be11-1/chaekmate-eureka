@@ -1,0 +1,4 @@
+# prod 시 포트는 배포 설명에 있음
+spring:
+  application:
+    name: chaekmate-eureka
