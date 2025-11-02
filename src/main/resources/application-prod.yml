@@ -1,8 +1,10 @@
-# prod 시 포트는 배포 설명에 있음
+# Eureka Port (prod) : "배포설명" 확인
+server:
+  port: ${PORT_NUMBER}
 
-eureka:
-  client:
-    register-with-eureka: false  # 자기 자신을 등록하지 않음
-    fetch-registry: false        # 다른 서버에서 정보 안 가져옴
-    service-url:
-      defaultZone: ${EUREKA_URL}
+# Eureka ID/PW
+spring:
+  security:
+    user:
+      name: ${EUREKA_ID}
+      password: ${EUREKA_PASSWORD}
