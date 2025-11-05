@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: chaekmate-eureka
+
+  lifecycle:
+    timeout-per-shutdown-phase: 10s
+
+server:
+  shutdown: graceful
+
+eureka:
+  client:
+    register-with-eureka: false  # 자기 자신을 등록하지 않음
+    fetch-registry: false        # 다른 서버에서 정보 안 가져옴
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info

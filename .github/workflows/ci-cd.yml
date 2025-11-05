@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      SPRING_PROFILES_ACTIVE: prod
       DOMAIN: ${{ secrets.DOMAIN_NAME }}
       PORT: ${{ secrets.PORT_NUMBER }}
+      EUREKA_ID: ${{ secrets.EUREKA_ID }}
+      EUREKA_PASSWORD: ${{ secrets.EUREKA_PASSWORD }}
 
     steps:
       # Step.1 코드 체크아웃
@@ -50,7 +53,8 @@ jobs:
             -Dsonar.projectKey=chaekmate-eureka \
             -Dsonar.projectName="chaekmate-eureka" \
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.coverage.jacoco.xmlReportPaths=api/target/site/jacoco/jacoco.xml
 
       # Step.6 JAR 파일 이름 변경
       - name: Rename JAR File
