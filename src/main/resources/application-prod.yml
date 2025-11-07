@@ -8,3 +8,10 @@ spring:
     user:
       name: ${EUREKA_ID}
       password: ${EUREKA_PASSWORD}
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:10313/eureka/
