@@ -14,7 +14,7 @@ jobs:
     env:
       SPRING_PROFILES_ACTIVE: prod
       DOMAIN: ${{ secrets.DOMAIN_NAME }}
-      PORT: ${{ secrets.PORT_NUMBER }}
+      PORT_NUMBER: ${{ secrets.PORT_NUMBER }}
       EUREKA_ID: ${{ secrets.EUREKA_ID }}
       EUREKA_PASSWORD: ${{ secrets.EUREKA_PASSWORD }}
 
