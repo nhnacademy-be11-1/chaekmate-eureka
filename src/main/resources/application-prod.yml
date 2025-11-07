@@ -1,0 +1,10 @@
+# Eureka Port (prod) : "배포설명" 확인
+server:
+  port: ${PORT_NUMBER}
+
+# Eureka ID/PW
+spring:
+  security:
+    user:
+      name: ${EUREKA_ID}
+      password: ${EUREKA_PASSWORD}
