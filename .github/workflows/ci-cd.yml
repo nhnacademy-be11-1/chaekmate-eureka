@@ -88,4 +88,6 @@ jobs:
           script: |
             export DOMAIN_NAME="${{ secrets.DOMAIN_NAME }}"
             export PORT_NUMBER="${{ secrets.PORT_NUMBER }}"
+            export EUREKA_ID="${{ secrets.EUREKA_ID }}"
+            export EUREKA_PASSWORD="${{ secrets.EUREKA_PASSWORD }}"
             bash -lc ./startup.sh
