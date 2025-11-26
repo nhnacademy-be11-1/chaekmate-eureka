@@ -90,4 +90,4 @@ jobs:
             export PORT_NUMBER="${{ secrets.PORT_NUMBER }}"
             export EUREKA_ID="${{ secrets.EUREKA_ID }}"
             export EUREKA_PASSWORD="${{ secrets.EUREKA_PASSWORD }}"
-            bash -lc ./startup.sh
+            bash -lc ./startup-single.sh
