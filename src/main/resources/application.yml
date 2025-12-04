@@ -3,7 +3,7 @@ spring:
     name: chaekmate-eureka
 
   lifecycle:
-    timeout-per-shutdown-phase: 10s
+    timeout-per-shutdown-phase: 20s
 
 server:
   shutdown: graceful
@@ -21,4 +21,12 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+info:
+  instanceId: ${spring.application.name}:${server.port}
